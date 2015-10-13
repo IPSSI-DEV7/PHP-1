@@ -34,6 +34,8 @@ C'est un langage peu typé et souple et donc facile à apprendre par un débutan
 __PHP 6 et Unicode__
 En 2005, le projet de faire de PHP un langage supportant et fonctionnant nativement en Unicode a été lancé par Andrei Zmievski, ceci en s'appuyant sur la bibliothèque International Components for Unicode (ICU) et en utilisant UTF-16 pour représenter les chaînes de caractères dans le moteur.
 
+En mars 2010, le projet 6.0 intégrant unicode fut abandonné et la version 5.4 fut préparée afin d'intégrer la plupart des fonctionnalités non liées à l'unicode encore dans la branche 6.0, telles que les traits ou l'extension des closures au modèle objet
+
 __Unicode__ est un standard informatique qui permet des échanges de textes dans différentes langues, à un niveau mondial.
 
 ## Why / Pourquoi ? 
