@@ -31,6 +31,11 @@ C'est un langage peu typé et souple et donc facile à apprendre par un débutan
 | 5.6 | 28 août 2014 |  |
 | 7.0 | 1er octobre 2015 | Performance améliorée grâce au moteur « phpng » (jusqu'à deux fois plus rapide que PHP 5.6), support homogène des architectures 64 bits |
 
+__PHP 6 et Unicode__
+En 2005, le projet de faire de PHP un langage supportant et fonctionnant nativement en Unicode a été lancé par Andrei Zmievski, ceci en s'appuyant sur la bibliothèque International Components for Unicode (ICU) et en utilisant UTF-16 pour représenter les chaînes de caractères dans le moteur.
+
+__Unicode__ est un standard informatique qui permet des échanges de textes dans différentes langues, à un niveau mondial.
+
 ## Why / Pourquoi ? 
 
 - Curriculum Vitæ (Origine de la création de PHP)
