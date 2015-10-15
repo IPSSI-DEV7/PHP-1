@@ -37,6 +37,8 @@ L'affectation par référence est aussi supportée, au moyen de la syntaxe `$var
 ## Opérateur
 
 ### Precedence des opérateurs
+La priorité des opérateurs spécifie l'ordre dans lequel les valeurs doivent être analysées. Par exemple, dans l'expression 1 + 5 * 3, le résultat est 16 et non 18, car la multiplication ("*") a une priorité supérieure par rapport à l'addition ("+"). Des parenthèses peuvent être utilisées pour forcer la priorité, si nécessaire. Par exemple : (1 + 5) * 3 donnera 18.
+
 
 ## Type
 ### Typage
