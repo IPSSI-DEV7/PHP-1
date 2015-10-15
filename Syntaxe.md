@@ -14,7 +14,7 @@ Les noms de variables suivent les mêmes règles de nommage que les autres entit
 
 > Pour employer une image, une variable est une boîte, que le programme (l’ordinateur) va repérer par une étiquette. Pour avoir accès au contenu de la boîte, il suffit de la désigner par son étiquette.
 
-![Variable]()
+![Variable](https://github.com/IPSSI-DEV7/PHP-1/blob/master/img/Variable.jpg)
 
 ## Affectation
 
