@@ -49,7 +49,7 @@ Il est aujourd'hui considéré comme la base de la création de site Internets d
 
 ## Where / Où ?
 
-![Schema Serveur Client]()
+![Schema Serveur Client](https://github.com/IPSSI-DEV7/PHP-1/blob/master/img/Sch%C3%A9ma%20serveur-client.png)
 
 ## Réference du Web utilisant PHP
 
