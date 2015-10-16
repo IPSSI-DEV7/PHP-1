@@ -40,10 +40,36 @@ Si PHP rencontre un nombre supérieur au maximal d'un entier, il sera interprét
 
 #### Conversion en entier
 
-Pour convertir explicitement une valeur en un entier, utilisez soit le mot-clé (int), soit (integer). Cependant, dans la plupart des cas, ce mot-clé n'est pas nécessaire vu qu'une valeur sera automatiquement convertie si un opérateur, une fonction ou une structure de contrôle demande un entier en guise d'argument.
+Pour convertir explicitement une valeur en un entier, utilisez soit le mot-clé `(int)`, soit `(integer)`. Cependant, dans la plupart des cas, ce mot-clé n'est pas nécessaire vu qu'une valeur sera automatiquement convertie si un opérateur, une fonction ou une structure de contrôle demande un entier en guise d'argument.
 
+__Depuis un booléen__
 
+`FALSE` correspond à 0 (zéro), et `TRUE` correspond à 1 (un).
 
+__Depuis un nombre à virgule flottante__
+
+Lorsque l'on convertit un nombre décimal en un entier, le nombre sera arrondi vers zéro.
+
+__Depuis des chaînes de caractères__
+
+Lorsqu'une chaîne de caractères est évaluée dans un contexte numérique, la valeur et le type résultants sont déterminés comme suit.
+
+Si la chaîne de caractères ne contient aucun '.', 'e', ou 'E', et que la valeur numérique est dans l'intervalle de représentation des entiers (notamment, qu'elle est plus petite que `PHP_INT_MAX`), alors la chaîne de caractères sera transformée en entier. Dans les autres cas, elle sera interprétée comme un nombre décimal.
+
+La valeur est fournie par la portion initiale de la chaîne de caractères. Si la chaîne de caractères commence par une donnée numérique valide, ce sera la valeur utilisée. Sinon, la valeur sera de 0 (zéro). Une donnée numérique valide est un signe optionnel, suivi par un ou plusieurs chiffres (contenant, optionnellement, un point décimal), suivi par, éventuellement, un exposant. L'exposant est un 'e' ou 'E' suivi par un ou plusieurs chiffres.
+
+```php
+<?php
+  $foo = 1 + "10.5";                // $foo est un nombre à virgule flottante (11.5)
+  $foo = 1 + "-1.3e3";              // $foo est un nombre à virgule flottante (-1299)
+  $foo = 1 + "bob-1.3e3";           // $foo est un entier (1)
+  $foo = 1 + "bob3";                // $foo est un entier (1)
+  $foo = 1 + "10 Small Pigs";       // $foo est un entier (11)
+  $foo = 4 + "10.2 Little Piggies"; // $foo est un nombre à virgule flottante (14.2)
+  $foo = "10.0 pigs " + 1;          // $foo est un nombre à virgule flottante (11)
+  $foo = "10.0 pigs " + 1.0;        // $foo est un nombre à virgule flottante (11)
+?>
+```
 
 ### Les chaînes de caractère (String)
 
