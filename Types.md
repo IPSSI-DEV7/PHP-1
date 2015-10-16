@@ -60,14 +60,19 @@ La valeur est fournie par la portion initiale de la chaîne de caractères. Si l
 
 ```php
 <?php
-  $foo = 1 + "10.5";                // $foo est un nombre à virgule flottante (11.5)
-  $foo = 1 + "-1.3e3";              // $foo est un nombre à virgule flottante (-1299)
-  $foo = 1 + "bob-1.3e3";           // $foo est un entier (1)
-  $foo = 1 + "bob3";                // $foo est un entier (1)
-  $foo = 1 + "10 Small Pigs";       // $foo est un entier (11)
-  $foo = 4 + "10.2 Little Piggies"; // $foo est un nombre à virgule flottante (14.2)
-  $foo = "10.0 pigs " + 1;          // $foo est un nombre à virgule flottante (11)
-  $foo = "10.0 pigs " + 1.0;        // $foo est un nombre à virgule flottante (11)
+  $foo = array();
+  $foo[] = 1 + "10.5";                // $foo est un nombre à virgule flottante (11.5)
+  $foo[] = 1 + "-1.3e3";              // $foo est un nombre à virgule flottante (-1299)
+  $foo[] = 1 + "bob-1.3e3";           // $foo est un entier (1)
+  $foo[] = 1 + "bob3";                // $foo est un entier (1)
+  $foo[] = 1 + "10 Small Pigs";       // $foo est un entier (11)
+  $foo[] = 4 + "10.2 Little Piggies"; // $foo est un nombre à virgule flottante (14.2)
+  $foo[] = "10.0 pigs " + 1;          // $foo est un nombre à virgule flottante (11)
+  $foo[] = "10.0 pigs " + 1.0;        // $foo est un nombre à virgule flottante (11)
+  foreach($foo as $value) {
+    echo "Le type de \$foo==$value; est " . gettype ($value) . "<br />\n";
+  }
+
 ?>
 ```
 
