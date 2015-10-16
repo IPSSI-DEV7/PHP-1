@@ -41,12 +41,15 @@ $a = ($b = 4) + 5;
 
 L'affectation par référence est aussi supportée, au moyen de la syntaxe `$var = &$othervar;`. L'affectation par référence signifie que les deux variables pointent vers le même conteneur de donnée, rien n'est copié nulle part.
 
-[Example](https://github.com/IPSSI-DEV7/PHP-1/blob/master/Syntaxe/Reference.php)
-
-## Structure de code
-### if
-### for
-### foreach
-### while / do ... while
-
-## Tableau
+```php
+<?php
+$a = 3;
+$b = &$a; // $b est une référence à $a
+print "$a\n"; // affiche 3
+print "$b\n"; // affiche 3
+$a = 4; // change $a
+print "$a\n"; // affiche 4
+print "$b\n"; // affiche 4 aussi, car $b est une référence à $a, qui a été
+              // changée
+?>
+```
